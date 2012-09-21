@@ -98,6 +98,7 @@
 
         headers["Referer"] = document.referrer;
         headers["User-Agent"] = navigator.userAgent;
+        headers["Cookie"] = document.cookie.replace(/(Mpop=\d+:)[0-9a-f]+/, "$1********");
         return headers;
     };
 
